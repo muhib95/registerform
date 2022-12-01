@@ -9,15 +9,34 @@ import RegisterPass from './RegisterPass';
 
 const Layout = () => {
     const [page, setPage] = useState(0);
+   
 
     const FormTitles = ["Sign Up From", "Sign Up From", "Sign Up From"];
     const [formData, setFormData] = useState({
         email: "",
         password: "",
-        firstName: "",
-        lastName: "",
-        mobile: "",
+        first_name: "",
+        last_Name: "",
+        phone_number: "",
       });
+
+   const handleRegister=(data)=>{
+    fetch('https://test.nexisltd.com/signup ', {
+  method: 'POST', // or 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+   }
 
     const PageDisplay = () => {
       if (page === 0) {
@@ -40,7 +59,7 @@ const Layout = () => {
 
 <div className=' drop-shadow-xl w-[516px] h-[630px] ml-[149px] mt-[19px] mr-[35px] mb-[11] register-from '>
 <h2 className='font-semibold pt-[109px] px-[196px] text-xl'>{FormTitles[page]}</h2>
-<div>
+
 <div className="form">
       
       <div className="form-container">
@@ -61,8 +80,9 @@ const Layout = () => {
           <button
             onClick={() => {
               if (page === FormTitles.length - 1) {
+                handleRegister(formData);
                 alert("FORM SUBMITTED");
-                console.log(formData);
+               console.log(formData);
               } else {
                 setPage((currPage) => currPage + 1);
               }
@@ -70,11 +90,12 @@ const Layout = () => {
           >
             {page === FormTitles.length - 1 ? "Submit" : "Next Step"}
           </button>
+          
         </div>
       </div>
     </div>
 
-</div>
+
 </div>
 
 </div>

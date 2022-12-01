@@ -9,17 +9,17 @@ const Register = ({ formData, setFormData }) => {
         <input
           type="text"
           placeholder="First Name..."
-          value={formData.firstName}
+          value={formData.first_name}
           onChange={(e) => {
-            setFormData({ ...formData, firstName: e.target.value });
+            setFormData({ ...formData, first_name: e.target.value });
           }}
         />
         <input
           type="text"
           placeholder="Last Name..."
-          value={formData.lastName}
+          value={formData.last_Name}
           onChange={(e) => {
-            setFormData({ ...formData, lastName: e.target.value });
+            setFormData({ ...formData, last_Name: e.target.value });
           }}
         />
        

@@ -7,9 +7,9 @@ const RegisterInfo = ({ formData, setFormData }) => {
          <input
           type="text"
           placeholder="Mobile..."
-          value={formData.mobile}
+          value={formData.phone_number}
           onChange={(event) =>
-            setFormData({ ...formData, mobile: event.target.value })
+            setFormData({ ...formData, phone_number: event.target.value })
           }
         />
         <input
