@@ -21,10 +21,13 @@ const Layout = () => {
       });
 
    const handleRegister=(data)=>{
+    // console.log(data);
     fetch('https://test.nexisltd.com/signup ', {
   method: 'POST', // or 'PUT'
   headers: {
     'Content-Type': 'application/json',
+    
+  
   },
   body: JSON.stringify(data),
 })
