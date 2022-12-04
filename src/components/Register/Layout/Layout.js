@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 // import { Outlet } from 'react-router-dom';
 import frontimg from '../../../acc/istockphoto-1321277096-612x612 1.png'
 import logo from '../../../acc/ultimate hrm logo-05-02 2.png'
@@ -71,7 +72,7 @@ const Layout = () => {
         </div>
         <div className="body">{PageDisplay()}</div>
         <div className="footer">
-          <button
+          <button className='ml-[89px]'
             disabled={page === 0}
             onClick={() => {
               setPage((currPage) => currPage - 1);
@@ -80,7 +81,7 @@ const Layout = () => {
             {page ===0 ? "":"Back"}
             
           </button>
-          <button
+          <button className='text-base bg-[#1678CB] w-[104px] text-[#FFFFFF] rounded-2xl ml-[211px] mb-[176px] mt-3 p-4'
             onClick={() => {
               if (page === FormTitles.length - 1) {
                 handleRegister(formData);
@@ -96,6 +97,7 @@ const Layout = () => {
           
         </div>
       </div>
+      <p className='text-center'>Already have an account?<span className='ml-4 text-[#1678CB]'><Link to='/login'>Login HERE!</Link></span> </p>
     </div>
 
 

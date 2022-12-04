@@ -4,7 +4,7 @@ const RegisterInfo = ({ formData, setFormData }) => {
     return (
         <div className="sign-up-container">
 
-         <input
+         <input className='text-[ #B4B4B4] border border-[#A4A4A4] ml-[74px] mr-[74px] mt-3'
           type="text"
           placeholder="Mobile..."
           value={formData.phone_number}
@@ -12,7 +12,7 @@ const RegisterInfo = ({ formData, setFormData }) => {
             setFormData({ ...formData, phone_number: event.target.value })
           }
         />
-        <input
+        <input className='text-[ #B4B4B4] border border-[#A4A4A4] ml-[74px] mr-[74px] mt-3'
           type="text"
           placeholder="Email..."
           value={formData.email}

@@ -1,5 +1,5 @@
 
-
+import frontimg from '../../acc/ultimate hrm logo-05-02 2.png'
 import React, { useEffect, useState} from 'react';
 
 const Attadents = () => {
@@ -41,6 +41,9 @@ console.log(users);
   
     return (
       <div>
+        <div className=' mt-[110px] ml-[128px] mb-[113px]'>
+<img src={frontimg} alt="" />
+</div>
       <h2 className='text-4xl w-[480px] mt-[139px] ml-[535px] bg-[#1678CB] text-white pt-[17px] pb-[19px] pl-[55px] pr-[42px]'>Attendance information</h2>
       <div className='mt-7'>
       {

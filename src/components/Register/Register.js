@@ -6,7 +6,7 @@ import  './Register.css';
 const Register = ({ formData, setFormData }) => {
     return (
         <div className="personal-info-container">
-        <input
+        <input className='text-[ #B4B4B4] border border-[#A4A4A4] ml-[89px] mr-[74px] mt-3'
           type="text"
           placeholder="First Name..."
           value={formData.first_name}
@@ -14,7 +14,7 @@ const Register = ({ formData, setFormData }) => {
             setFormData({ ...formData, first_name: e.target.value });
           }}
         />
-        <input
+        <input className='text-[ #B4B4B4] border border-[#A4A4A4] ml-[89px] mr-[74px] mt-3'
           type="text"
           placeholder="Last Name..."
           value={formData.last_Name}
